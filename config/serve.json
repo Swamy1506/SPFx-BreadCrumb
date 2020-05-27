@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://neuhyd1.sharepoint.com/sites/TeamSite/Subsite/SitePages/Home.aspx",
+      "customActions": {
+        "f5090ff4-f46c-4b56-9b0d-b72abf1e26a7": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "breadcrumb": {
+      "pageUrl": "https://neuhyd1.sharepoint.com/sites/TeamSite/Subsite/SitePages/Home.aspx",
+      "customActions": {
+        "f5090ff4-f46c-4b56-9b0d-b72abf1e26a7": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}
