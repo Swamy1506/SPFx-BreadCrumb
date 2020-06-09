@@ -31,6 +31,7 @@ export default class SiteBreadcrumb extends React.Component<ISiteBreadcrumbProps
      * Start the link generation for the breadcrumb
      */
     private _generateLinks() {
+        window['context'] = this.props.context;
         // Add the current site to the links list
         this._linkItems.push({
             text: this.props.context.pageContext.web.title,
@@ -71,6 +72,7 @@ export default class SiteBreadcrumb extends React.Component<ISiteBreadcrumbProps
                 return response.json();
             })
             .then((webInfo: IWebInfo) => {
+                window['webInfo'] = webInfo;
                 if (!webInfo.error) {
                     // Check if the correct data is retrieved
                     if (!webInfo.ServerRelativeUrl && !webInfo.Title) {
@@ -115,7 +117,6 @@ export default class SiteBreadcrumb extends React.Component<ISiteBreadcrumbProps
     public render(): React.ReactElement<ISiteBreadcrumbProps> {
         return (
             <div className={styles.breadcrumb} >
-                <span>test</span>
                 <div className="ms-bgColor-themePrimary">
                     <Breadcrumb
                         items={this.state.breadcrumbItems}

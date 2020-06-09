@@ -39,7 +39,6 @@ export default class BreadcrumbApplicationCustomizer
       message = '(No properties were provided.)';
     }
 
-    Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
 
     // Wait for the placeholders to be created (or handle them being changed) and then
     // render.
@@ -49,7 +48,6 @@ export default class BreadcrumbApplicationCustomizer
   }
 
   private _renderPlaceHolders(): void {
-    debugger;
     // Check if the header placeholder is already set and if the header placeholder is available
     if (!this._headerPlaceholder && this.context.placeholderProvider.placeholderNames.indexOf(PlaceholderName.Top) !== -1) {
       this._headerPlaceholder = this.context.placeholderProvider.tryCreateContent(PlaceholderName.Top, {
